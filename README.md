@@ -30,7 +30,7 @@ contains a fully spec-compliant Python solver that:
 | MT components | x, y, z — full 3-component treatment |
 | MT lineshape | Lorentzian (via short T2 = 40 µs in full BM equations, no explicit lineshape term) |
 | f_water = 1 | Yes — definition 1, all other fractions relative to water |
-| Solver | `scipy.linalg.expm` — Al-Mohy & Higham (2009), scaling & squaring, Padé order m=13 |
+| Solver   scipy.linalg.expm — Al-Mohy & Higham (2009), scaling & squaring, Padé order selected automatically based on matrix norm (up to m=13) |
 | Homogeneous matrix | No — steady state computed separately: M(t) = expm(A·t)·(M₀ − M_ss) + M_ss |
 
 ---
